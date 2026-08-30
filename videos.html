@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tutorials & Lectures | Note Hub Official</title>
+    <meta name="description" content="Watch high-quality practical video tutorials, coding bootcamps, and lectures on Note Hub Official.">
+    <meta name="keywords" content="Video Tutorials, Coding Lectures, AI Workshops, Note Hub Videos">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">Note Hub <span>Official</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html">Book Library</a>
+                <a href="courses.html">Free Courses</a>
+                <a href="videos.html" class="active">Video Tutorials</a>
+                <a href="pdf-notes.html">PDF Notes</a>
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Videos Hero Section -->
+    <section class="hero" style="padding-bottom: 2rem;">
+        <div class="hero-content">
+            <span class="badge">🎬 Interactive Video Hub</span>
+            <h1>Practical Video Lectures & <span>Technical Workshops</span></h1>
+            <p>Watch step-by-step video lessons, programming crash courses, and hands-on demonstrations across various technology and business fields.</p>
+            
+            <!-- Video Search Input -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" id="videoSearchInput" class="search-input" onkeyup="searchVideos()" placeholder="Search video topics (e.g. Python tutorial, AI crash course, Web design)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Video Grid Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <div>
+                <h2>Featured Video Lectures & Workshops</h2>
+                <p>Click on any video card to launch the interactive player.</p>
+            </div>
+        </div>
+
+        <div class="grid-cards" id="videosGrid">
+            
+            <!-- Video Card 1 -->
+            <div class="card video-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">AI & Automation</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Complete ChatGPT & Prompt Engineering Workshop</h3>
+                <p>Learn how to craft powerful prompts and build real-world AI workflows step by step.</p>
+                <a href="#" onclick="alert('Playing Video: ChatGPT & Prompt Engineering Workshop...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="card video-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Web Development</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Full-Stack Web Development Full Course</h3>
+                <p>A comprehensive video guide covering HTML, CSS, JavaScript, and modern web deployment.</p>
+                <a href="#" onclick="alert('Playing Video: Full-Stack Web Development Course...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="card video-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Python Programming</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Python for Beginners: Zero to Hero Crash Course</h3>
+                <p>Master core Python syntax, functions, modules, and basic automation scripts with live examples.</p>
+                <a href="#" onclick="alert('Playing Video: Python Crash Course...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="card video-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Cyber Security</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Ethical Hacking & Cybersecurity Fundamentals</h3>
+                <p>Understanding basic network tools, security protocols, and system defenses in practical scenarios.</p>
+                <a href="#" onclick="alert('Playing Video: Cybersecurity Fundamentals...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+            <!-- Video Card 5 -->
+            <div class="card video-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Data Science</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Data Analysis & Visualization with Python</h3>
+                <p>Hands-on tutorial on cleaning data, analyzing datasets, and creating visual charts with Pandas and Matplotlib.</p>
+                <a href="#" onclick="alert('Playing Video: Data Analysis Tutorial...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+            <!-- Video Card 6 -->
+            <div class="card video-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Business Strategy</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Digital Business & Startup Mastery</h3>
+                <p>Learn core strategies for validating startup ideas, online branding, and digital marketing techniques.</p>
+                <a href="#" onclick="alert('Playing Video: Digital Business Mastery...')" class="card-btn"><i class="fa-solid fa-play"></i> Watch Video</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>Note Hub Official</strong>. Dedicated to Practical Technical Education.</p>
+    </footer>
+
+    <!-- Search Script -->
+    <script>
+        function searchVideos() {
+            let input = document.getElementById('videoSearchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('video-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let cardText = cards[i].innerText.toLowerCase();
+                if (cardText.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
