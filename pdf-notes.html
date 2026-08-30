@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic PDF Notes & Past Papers | Note Hub Official</title>
+    <meta name="description" content="Download free university notes, handwritten lecture guides, exam past papers, and research PDFs on Note Hub Official.">
+    <meta name="keywords" content="PDF Notes, University Notes, Handwritten Lecture Notes, Exam Past Papers, Note Hub Academic">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">Note Hub <span>Official</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html">Book Library</a>
+                <a href="courses.html">Free Courses</a>
+                <a href="videos.html">Video Tutorials</a>
+                <a href="pdf-notes.html" class="active">PDF Notes</a>
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Notes Hero Section -->
+    <section class="hero" style="padding-bottom: 2rem;">
+        <div class="hero-content">
+            <span class="badge">📄 Global Academic PDF Archive</span>
+            <h1>University Lecture Notes & <span>Exam Past Papers</span></h1>
+            <p>Access handwritten lecture guides, subject summaries, past papers, and university-level study material for instant viewing and PDF download.</p>
+            
+            <!-- Notes Search Input -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" id="noteSearchInput" class="search-input" onkeyup="searchNotes()" placeholder="Search notes by subject (e.g. Physics, Computer Science, Calculus, Chemistry)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Notes Grid Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <div>
+                <h2>Featured Academic Notes & Study Guides</h2>
+                <p>Select any PDF guide to read online or download to your device.</p>
+            </div>
+        </div>
+
+        <div class="grid-cards" id="notesGrid">
+            
+            <!-- Note 1 -->
+            <div class="card note-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Computer Science</div>
+                <i class="fa-solid fa-file-code card-icon"></i>
+                <h3>Data Structures & Algorithms Notes</h3>
+                <p>Complete handwritten notes covering arrays, linked lists, trees, graphs, and sorting algorithms.</p>
+                <a href="#" onclick="alert('Opening Data Structures PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+            <!-- Note 2 -->
+            <div class="card note-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Mathematics</div>
+                <i class="fa-solid fa-calculator card-icon"></i>
+                <h3>Calculus & Linear Algebra Complete Guide</h3>
+                <p>Comprehensive exam notes, solved derivatives, integration problems, and matrix formulas.</p>
+                <a href="#" onclick="alert('Opening Calculus PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+            <!-- Note 3 -->
+            <div class="card note-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Physics</div>
+                <i class="fa-solid fa-atom card-icon"></i>
+                <h3>Quantum Physics & Mechanics Summary</h3>
+                <p>Lecture summaries, key equations, and solved past paper questions for university exams.</p>
+                <a href="#" onclick="alert('Opening Quantum Physics PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+            <!-- Note 4 -->
+            <div class="card note-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Artificial Intelligence</div>
+                <i class="fa-solid fa-microchip card-icon"></i>
+                <h3>Introduction to AI & Machine Learning Notes</h3>
+                <p>Core principles of neural networks, machine learning algorithms, and deep learning concepts.</p>
+                <a href="#" onclick="alert('Opening AI Notes PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+            <!-- Note 5 -->
+            <div class="card note-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Software Engineering</div>
+                <i class="fa-solid fa-diagram-project card-icon"></i>
+                <h3>System Design & Software Architecture Notes</h3>
+                <p>Detailed notes on microservices, system scaling, database design, and software lifecycles.</p>
+                <a href="#" onclick="alert('Opening System Design PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+            <!-- Note 6 -->
+            <div class="card note-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Business Studies</div>
+                <i class="fa-solid fa-briefcase card-icon"></i>
+                <h3>Business Administration & Finance Basics</h3>
+                <p>Summary guides on financial accounting, corporate management, and market analysis fundamentals.</p>
+                <a href="#" onclick="alert('Opening Business Studies PDF...')" class="card-btn"><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>Note Hub Official</strong>. Dedicated to Global Student Support.</p>
+    </footer>
+
+    <!-- Search Script -->
+    <script>
+        function searchNotes() {
+            let input = document.getElementById('noteSearchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('note-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let cardText = cards[i].innerText.toLowerCase();
+                if (cardText.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
