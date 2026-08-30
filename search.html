@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Knowledge Search Engine | Note Hub Official</title>
+    <meta name="description" content="Search across millions of free books, courses, video tutorials, and academic PDF notes on Note Hub Official.">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">Note Hub <span>Official</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html">Book Library</a>
+                <a href="courses.html">Free Courses</a>
+                <a href="videos.html">Video Tutorials</a>
+                <a href="pdf-notes.html">PDF Notes</a>
+                <a href="search.html" class="active"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Engine Hero Section -->
+    <section class="hero" style="padding-bottom: 2rem;">
+        <div class="hero-content">
+            <span class="badge">🔍 Universal Knowledge Finder</span>
+            <h1>Global Search Engine for <span>Books, Courses & Notes</span></h1>
+            <p>Type any keyword to instantly query our unified index of ebooks, video lectures, coding bootcamps, and research papers.</p>
+            
+            <!-- Dynamic Search Input Bar -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" id="globalSearchInput" class="search-input" onkeyup="executeGlobalSearch()" placeholder="Search anything (e.g. Atomic Habits, Python, AI, Calculus, Marketing)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results Grid -->
+    <section class="content-section">
+        <div class="section-header">
+            <div>
+                <h2>Live Search Results</h2>
+                <p id="searchStatsText">Showing matching resources from all categories...</p>
+            </div>
+        </div>
+
+        <div class="grid-cards" id="searchResultsGrid">
+            
+            <!-- Result Item 1 -->
+            <div class="card search-card" data-category="books">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[Book] Self Improvement</div>
+                <i class="fa-solid fa-book-open card-icon"></i>
+                <h3>Atomic Habits</h3>
+                <p>By James Clear - Bestselling book on building good habits and breaking bad ones.</p>
+                <a href="books.html" class="card-btn">Go to Book Library <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Result Item 2 -->
+            <div class="card search-card" data-category="books">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[Book] Finance</div>
+                <i class="fa-solid fa-vault card-icon"></i>
+                <h3>Rich Dad Poor Dad</h3>
+                <p>By Robert T. Kiyosaki - Financial education and wealth building roadmap.</p>
+                <a href="books.html" class="card-btn">Go to Book Library <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Result Item 3 -->
+            <div class="card search-card" data-category="courses">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[Course] Artificial Intelligence</div>
+                <i class="fa-solid fa-robot card-icon"></i>
+                <h3>Mastering ChatGPT & Prompt Engineering</h3>
+                <p>Comprehensive bootcamp on advanced prompting techniques and AI automation.</p>
+                <a href="courses.html" class="card-btn">Go to Free Courses <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Result Item 4 -->
+            <div class="card search-card" data-category="courses">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[Course] Web Development</div>
+                <i class="fa-solid fa-code card-icon"></i>
+                <h3>Full-Stack Web Bootcamp (HTML, CSS, JS, React)</h3>
+                <p>Learn to build dynamic web applications from zero to production level.</p>
+                <a href="courses.html" class="card-btn">Go to Free Courses <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Result Item 5 -->
+            <div class="card search-card" data-category="videos">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[Video] Practical Workshop</div>
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Python for Beginners Crash Course</h3>
+                <p>Step-by-step video lecture explaining Python syntax, data structures, and APIs.</p>
+                <a href="videos.html" class="card-btn">Go to Video Tutorials <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Result Item 6 -->
+            <div class="card search-card" data-category="notes">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">[PDF Notes] Computer Science</div>
+                <i class="fa-solid fa-file-code card-icon"></i>
+                <h3>Data Structures & Algorithms Notes</h3>
+                <p>Handwritten university guides and exam preparation summaries with diagrams.</p>
+                <a href="pdf-notes.html" class="card-btn">Go to PDF Notes <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>Note Hub Official</strong>. Built for Universal Search & Learning.</p>
+    </footer>
+
+    <!-- Global Search Script -->
+    <script>
+        // Check for search query in URL parameter
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const queryParam = urlParams.get('q');
+            if(queryParam) {
+                document.getElementById('globalSearchInput').value = queryParam;
+                executeGlobalSearch();
+            }
+        };
+
+        function executeGlobalSearch() {
+            let input = document.getElementById('globalSearchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('search-card');
+            let matchCount = 0;
+
+            for (let i = 0; i < cards.length; i++) {
+                let cardText = cards[i].innerText.toLowerCase();
+                if (cardText.includes(input)) {
+                    cards[i].style.display = "flex";
+                    matchCount++;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            document.getElementById('searchStatsText').innerText = "Found " + matchCount + " matching resource(s) for your search.";
+        }
+    </script>
+</body>
+</html>
