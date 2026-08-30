@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Book Library & Wealth Diaries | Note Hub Official</title>
+    <meta name="description" content="Access thousands of bestselling business, finance, and self-improvement books like Atomic Habits, Rich Dad Poor Dad, and personal diaries for free.">
+    <meta name="keywords" content="Atomic Habits PDF, Rich Dad Poor Dad PDF, Business Books Free, Wealth Diaries, Note Hub Books">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">Note Hub <span>Official</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html" class="active">Book Library</a>
+                <a href="courses.html">Free Courses</a>
+                <a href="videos.html">Video Tutorials</a>
+                <a href="pdf-notes.html">PDF Notes</a>
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Books Hero Section -->
+    <section class="hero" style="padding-bottom: 2rem;">
+        <div class="hero-content">
+            <span class="badge">📚 Million-Book Digital Archive</span>
+            <h1>World's Bestselling Books, <span>Business Diaries & Wealth Guides</span></h1>
+            <p>From mindset transformation and investment strategies to founder diaries and rare ebooks — all freely accessible for online reading and PDF download.</p>
+            
+            <!-- Book Search Input -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" id="bookSearchInput" class="search-input" onkeyup="searchBooks()" placeholder="Search books by title, author, or topic (e.g. Atomic Habits, Kiyosaki, Mindset)...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Book Grid Section -->
+    <section class="content-section">
+        <div class="section-header">
+            <div>
+                <h2>Featured Books & Rare Personal Diaries</h2>
+                <p>Click on any book to open the reader or download the complete PDF.</p>
+            </div>
+        </div>
+
+        <div class="grid-cards" id="booksGrid">
+            
+            <!-- Book 1 -->
+            <div class="card book-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Self Improvement</div>
+                <i class="fa-solid fa-book-open card-icon"></i>
+                <h3>Atomic Habits</h3>
+                <p><strong>Author:</strong> James Clear<br>An Easy & Proven Way to Build Good Habits & Break Bad Ones. The #1 global bestseller.</p>
+                <a href="#" onclick="alert('Opening Atomic Habits PDF Reader...')" class="card-btn"><i class="fa-solid fa-file-pdf"></i> Read PDF</a>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="card book-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Financial Freedom</div>
+                <i class="fa-solid fa-vault card-icon"></i>
+                <h3>Rich Dad Poor Dad</h3>
+                <p><strong>Author:</strong> Robert T. Kiyosaki<br>What the rich teach their kids about money that the poor and middle class do not!</p>
+                <a href="#" onclick="alert('Opening Rich Dad Poor Dad PDF Reader...')" class="card-btn"><i class="fa-solid fa-file-pdf"></i> Read PDF</a>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="card book-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Psychology of Wealth</div>
+                <i class="fa-solid fa-chart-line card-icon"></i>
+                <h3>The Psychology of Money</h3>
+                <p><strong>Author:</strong> Morgan Housel<br>Timeless lessons on wealth, greed, and happiness. Essential reading for every investor.</p>
+                <a href="#" onclick="alert('Opening Psychology of Money PDF Reader...')" class="card-btn"><i class="fa-solid fa-file-pdf"></i> Read PDF</a>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="card book-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Startups & Innovation</div>
+                <i class="fa-solid fa-rocket card-icon"></i>
+                <h3>Zero to One</h3>
+                <p><strong>Author:</strong> Peter Thiel<br>Notes on startups and how to build the future. Breakthrough thinking for creators.</p>
+                <a href="#" onclick="alert('Opening Zero to One PDF Reader...')" class="card-btn"><i class="fa-solid fa-file-pdf"></i> Read PDF</a>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="card book-card">
+                <div style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Mindset Mastery</div>
+                <i class="fa-solid fa-brain card-icon"></i>
+                <h3>Think and Grow Rich</h3>
+                <p><strong>Author:</strong> Napoleon Hill<br>The classic landmark bestseller that transformed millions of entrepreneurs worldwide.</p>
+                <a href="#" onclick="alert('Opening Think and Grow Rich PDF Reader...')" class="card-btn"><i class="fa-solid fa-file-pdf"></i> Read PDF</a>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="card book-card">
+                <div style="color: var(--primary-cyan); font-size: 0.8rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Private Diary Archive</div>
+                <i class="fa-solid fa-user-ninja card-icon"></i>
+                <h3>Founder's Secret Business Diary</h3>
+                <p><strong>Exclusive Archive:</strong> Note Hub Official<br>Daily logs, routines, trade secrets, and execution frameworks of successful founders.</p>
+                <a href="#" onclick="alert('Opening Founder Diary Archive...')" class="card-btn"><i class="fa-solid fa-book-bookmark"></i> Read Diary</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>Note Hub Official</strong>. Built for Global Academic & Business Excellence.</p>
+    </footer>
+
+    <!-- Search Script -->
+    <script>
+        function searchBooks() {
+            let input = document.getElementById('bookSearchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('book-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let cardText = cards[i].innerText.toLowerCase();
+                if (cardText.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
