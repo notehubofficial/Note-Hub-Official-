@@ -3,138 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note Hub Official | International Learning & Premium Resources</title>
+    <!-- Google SEO & Search Engine Indexing Meta Tags -->
+    <title>Note Hub Official | Free Books, AI Courses & Academic Notes</title>
+    <meta name="description" content="Access thousands of free bestselling books, AI bootcamps, programming courses, video lectures, and university notes on Note Hub Official.">
+    <meta name="keywords" content="Note Hub Official, Atomic Habits PDF, Rich Dad Poor Dad, Free AI Courses, Coding Bootcamps, Academic PDF Notes">
+    <meta name="robots" content="index, follow">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo-box">
+            <a href="index.html" class="logo-box">
                 <i class="fa-solid fa-graduation-cap logo-icon"></i>
                 <span class="logo-text">Note Hub <span>Official</span></span>
             </a>
             <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#courses">Courses</a>
-                <a href="#resources">Resources</a>
-                <button class="btn-primary" onclick="alert('Google & Facebook Login coming in next database update!')">Sign In</button>
+                <a href="index.html" class="active">Home</a>
+                <a href="books.html">Book Library</a>
+                <a href="courses.html">Free Courses</a>
+                <a href="videos.html">Video Tutorials</a>
+                <a href="pdf-notes.html">PDF Notes</a>
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+                <button class="btn-primary" onclick="openAuthModal()">Sign In / Sign Up</button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section with Search Bar -->
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <span class="badge">🚀 World-Class Educational Hub</span>
-            <h1>Access High-Value Paid Courses & Premium Notes For Free</h1>
-            <p>Explore international standard lecture notes, coding bootcamps, and career certifications.</p>
+            <span class="badge">🌐 World's Premier Educational Archive</span>
+            <h1>Unlock Unlimited <span>Paid Courses, Books & Academic Notes</span> Completely Free</h1>
+            <p>Empowering millions of learners worldwide with high-income AI skills, bestselling books, financial diaries, and university-level research papers.</p>
             
-            <!-- Dynamic Search Bar -->
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="courseSearch" onkeyup="filterCourses()" placeholder="Search courses (e.g., Web Development, AI, Notes)...">
+            <!-- Global Live Search Bar -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" class="search-input" placeholder="Search anything (e.g., Atomic Habits, Python, AI, Physics Notes)..." onkeydown="if(event.key === 'Enter') window.location.href='search.html?q=' + encodeURIComponent(this.value)">
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses-section">
-        <div class="section-title">
-            <h2>Featured International Courses</h2>
-            <p>Select a course to start streaming video lectures and download materials.</p>
+    <!-- Live Platform Statistics -->
+    <section class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">100,000+</div>
+            <div class="stat-label">Bestselling Books & Diaries</div>
         </div>
-
-        <div class="courses-grid" id="coursesGrid">
-            
-            <!-- Course 1 -->
-            <div class="course-card">
-                <div class="card-badge">Bestseller</div>
-                <h3>Full-Stack Web Development 2026</h3>
-                <p>Learn HTML, CSS, JavaScript, React, and Backend Architecture from industry experts.</p>
-                <div class="card-footer">
-                    <span class="price">Free</span>
-                    <button class="btn-card" onclick="openVideo('https://www.youtube.com/embed/nu_pCVPKzTk')">
-                        <i class="fa-solid fa-circle-play"></i> Watch Video
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course 2 -->
-            <div class="course-card">
-                <div class="card-badge gold">Elite</div>
-                <h3>Data Science & AI Masterclass</h3>
-                <p>Complete roadmap covering Python, Machine Learning algorithms, and Deep Learning.</p>
-                <div class="card-footer">
-                    <span class="price">Free</span>
-                    <button class="btn-card" onclick="openVideo('https://www.youtube.com/embed/aircAruvnKk')">
-                        <i class="fa-solid fa-circle-play"></i> Watch Video
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course 3 -->
-            <div class="course-card">
-                <div class="card-badge">PDF Notes</div>
-                <h3>International Academic Notes Hub</h3>
-                <p>Handcrafted study guides, exam revision kits, and lecture notes for Global Students.</p>
-                <div class="card-footer">
-                    <span class="price">Free</span>
-                    <button class="btn-card" onclick="alert('PDF Downloads module opening...')">
-                        <i class="fa-solid fa-file-pdf"></i> Access Notes
-                    </button>
-                </div>
-            </div>
-
+        <div class="stat-card">
+            <div class="stat-number">50,000+</div>
+            <div class="stat-label">Free Tech & AI Bootcamps</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">10,000+</div>
+            <div class="stat-label">Video Tutorials & Labs</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100% FREE</div>
+            <div class="stat-label">Open Access for Everyone</div>
         </div>
     </section>
 
-    <!-- Video Popup Modal -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeVideo()">&times;</span>
-            <div class="video-container">
-                <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+    <!-- Main Feature Modules -->
+    <section class="content-section">
+        <div class="section-header">
+            <div>
+                <h2>Explore Core Knowledge Hubs</h2>
+                <p>Select a category to start learning or downloading resources instantly.</p>
+            </div>
+        </div>
+
+        <div class="grid-cards">
+            <!-- Digital Book Library -->
+            <div class="card">
+                <i class="fa-solid fa-book-bookmark card-icon"></i>
+                <h3>Digital Book Library</h3>
+                <p>Read world-famous self-improvement, business, and financial freedom books like <i>Atomic Habits</i> and <i>Rich Dad Poor Dad</i>.</p>
+                <a href="books.html" class="card-btn">Explore Books <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Free AI & Tech Courses -->
+            <div class="card">
+                <i class="fa-solid fa-brain card-icon"></i>
+                <h3>Free AI & Tech Bootcamps</h3>
+                <p>Master Artificial Intelligence, Prompt Engineering, Full-Stack Web Development, Cyber Security, and Data Science.</p>
+                <a href="courses.html" class="card-btn">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Video Tutorials -->
+            <div class="card">
+                <i class="fa-solid fa-circle-play card-icon"></i>
+                <h3>Video Lectures & Tutorials</h3>
+                <p>Watch step-by-step video crash courses, coding bootcamps, and practical software implementation guides.</p>
+                <a href="videos.html" class="card-btn">Watch Videos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Academic PDF Notes -->
+            <div class="card">
+                <i class="fa-solid fa-file-pdf card-icon"></i>
+                <h3>Academic PDF Notes</h3>
+                <p>Download handwritten university notes, school/college lecture guides, and international exam past papers.</p>
+                <a href="pdf-notes.html" class="card-btn">Download Notes <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Modal (Login/Signup Popup) -->
+    <div id="authModal" class="modal">
+        <div class="modal-card">
+            <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+            
+            <div class="tab-buttons">
+                <button id="loginTabBtn" class="tab-btn active" onclick="switchTab('login')">Log In</button>
+                <button id="signupTabBtn" class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active" onsubmit="handleAuth(event, 'Login')">
+                <h3>Welcome Back</h3>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-auth">Log In</button>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form" onsubmit="handleAuth(event, 'Signup')">
+                <h3>Create Free Account</h3>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Create Password" required>
+                <button type="submit" class="btn-auth">Sign Up</button>
+            </form>
+
+            <div class="divider"><span>OR CONTINUE WITH</span></div>
+
+            <!-- Social Login Buttons -->
+            <div class="social-login">
+                <button class="btn-social google" onclick="alert('Connecting to Google Account...')">
+                    <i class="fa-brands fa-google"></i> Google
+                </button>
+                <button class="btn-social facebook" onclick="alert('Connecting to Facebook Account...')">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </button>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <strong>Note Hub Official</strong>. Built for global academic excellence.</p>
+        <p>&copy; 2026 <strong>Note Hub Official</strong>. Designed for Global Academic & Technical Excellence.</p>
     </footer>
 
-    <!-- JavaScript logic -->
     <script>
-        // Live Search Filter Function
-        function filterCourses() {
-            let input = document.getElementById('courseSearch').value.toLowerCase();
-            let cards = document.getElementsByClassName('course-card');
-
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-
-                if (title.includes(input) || desc.includes(input)) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
+        function openAuthModal() { document.getElementById('authModal').style.display = 'flex'; }
+        function closeAuthModal() { document.getElementById('authModal').style.display = 'none'; }
+        
+        function switchTab(tab) {
+            if(tab === 'login') {
+                document.getElementById('loginForm').classList.add('active');
+                document.getElementById('signupForm').classList.remove('active');
+                document.getElementById('loginTabBtn').classList.add('active');
+                document.getElementById('signupTabBtn').classList.remove('active');
+            } else {
+                document.getElementById('signupForm').classList.add('active');
+                document.getElementById('loginForm').classList.remove('active');
+                document.getElementById('signupTabBtn').classList.add('active');
+                document.getElementById('loginTabBtn').classList.remove('active');
             }
         }
 
-        // Open Video Modal
-        function openVideo(videoUrl) {
-            document.getElementById('videoPlayer').src = videoUrl;
-            document.getElementById('videoModal').style.display = "flex";
-        }
-
-        // Close Video Modal
-        function closeVideo() {
-            document.getElementById('videoModal').style.display = "none";
-            document.getElementById('videoPlayer').src = "";
+        function handleAuth(e, type) {
+            e.preventDefault();
+            alert(type + ' Successful! Welcome to Note Hub Official.');
+            closeAuthModal();
         }
     </script>
 </body>
